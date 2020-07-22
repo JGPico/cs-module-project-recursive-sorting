@@ -34,20 +34,10 @@ def merge_sort(arr):
         left = arr[:mid]
         right = arr[mid:]
 
-        merge_sort(left)
-        merge_sort(right)
-
-        merge(left, right)
-    else:
-        return arr
-
-    # split each element into partitions of size 1
-
-    # recursively merge adjacent partitions
-
-    # copy elements back to original array (use merge function)
+        arr = merge(merge_sort(left), merge_sort(right))
 
     return arr
+
 
 # STRETCH: implement the recursive logic for merge sort in a way that doesn't
 # utilize any extra memory
